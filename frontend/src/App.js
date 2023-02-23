@@ -43,14 +43,13 @@ const App = () => {
         </div>
 
         <div className="playground" id="playground">
-                {/* <div className="message-list">
+                <div className="message-list">
                     <div className="message -left">
                         <div className="nes-balloon from-left">
                             <p>Playground</p>
                         </div>
                     </div>
-                </div> */}
-                <p>Playground</p>
+                </div>
         </div>
         <CodeEditorWindow  />
         <br></br>
