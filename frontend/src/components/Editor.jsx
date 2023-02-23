@@ -33,10 +33,16 @@ const CodeEditorWindow = ({ language, code}) => {
 
   };
 
-  const API_URL = 'https://brocodebackend.onrender.com/interpret'
+  useEffect(()=>{
+    const button = document.getElementById("runbt");
+    button.addEventListener("click", runCode({value}));
+  },[]);
+
+  const API_URL = 'https://broCodebackend.onrender.com/interpret'
 
   const runCode = async (value) => {
     const v = value.value
+    console.log(v)
 
     const options = {
       method: 'POST',
@@ -69,7 +75,7 @@ const CodeEditorWindow = ({ language, code}) => {
         <button onClick={()=>runCode({value})} id="runbt" className="btn btn-success btn-lg runbutton">Run</button>
       </div>
     </div>
-    {/* <h1>Output</h1> */}
+    <h5 className="outputText">Output</h5>
     <div className="overlay rounded-md overflow-hidden w-full h-full shadow-4xl codeEditor border border-white rounded rounded-4">
       <Editor
         height="15vh"
