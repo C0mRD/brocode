@@ -33,13 +33,11 @@ const CodeEditorWindow = ({ language, code}) => {
 
   };
 
-  const API_URL = 'http://127.0.0.1:5000/interpret'
+  const API_URL = 'https://brocodebackend.onrender.com/interpret'
 
   const runCode = async (value) => {
     const v = value.value
-    console.log(v)
 
-    // const response = await fetch(`${API_URL}?code=${v}`);
     const options = {
       method: 'POST',
       headers: {
