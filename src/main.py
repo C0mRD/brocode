@@ -12,7 +12,7 @@ def interpret():
         with open('code.bro', 'w+') as f:
             f.write(code)
         f.close()
-        p = subprocess.Popen(["python","broCodeInterpreter.py","code.bro"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        p = subprocess.Popen(["python","brocode.py","code.bro"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         output, error = p.communicate()
         return output.decode()
         

@@ -217,17 +217,6 @@ class broCodeInterpreter(ParseTreeVisitor):
             return ct.BOOL().getText() == 'true'
         elif ct.NULL() is not None:
             return None
-        
-
-# if __name__ == '__main__':
-#     input_stream = FileStream('path/to/your/brocode/file')
-#     lexer = broCodeLexer(input_stream)
-#     stream = CommonTokenStream(lexer)
-#     parser = broCodeParser(stream)
-#     tree = parser.program()
-#     interpreter = broCodeInterpreter()
-#     walker = ParseTreeWalker()
-#     walker.walk(interpreter, tree)
 
 def interpret_file(path:str):
     input_stream = FileStream(path)
@@ -237,19 +226,14 @@ def interpret_file(path:str):
     ast = parser.program()
     visitor = broCodeInterpreter()
     visitor.visit(ast)
-
-def interpret(code:str):
-    lexer = broCodeLexer(code)
-    stream = CommonTokenStream(lexer)
-    parser = broCodeParser(stream)
-    ast = parser.program()
-    visitor = broCodeInterpreter()
-    visitor.visit(ast)
     
 def main():
-    file = sys.argv[1]
-    interpret_file(file)
-
+    if len(sys.argv)>1:
+        file = sys.argv[1]
+        interpret_file(file)
+    else:
+        print("Input filename missing")
+        
 if __name__ == '__main__':
     main()
     

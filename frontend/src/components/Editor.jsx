@@ -21,7 +21,7 @@ const CodeEditorWindow = ({ language, code}) => {
       na hole bro{\n\
         bol bro 'b greater than 10';\n\
       }\n\
-      b = b+1;\n\
+      b -> b+1;\n\
   }\n\
   stop bro"
 

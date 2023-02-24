@@ -16,6 +16,6 @@ jotokhon bro b<a{
     na hole bro{
       bol bro "b greater than 10";
     }
-    b = b+1;
+    b -> b+1;
 }
 stop bro
