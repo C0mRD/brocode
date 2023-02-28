@@ -1,4 +1,4 @@
-import {React, useEffect, useState} from "react";
+import {React} from "react";
 import './App.css';
 import CodeEditorWindow from "./components/Editor";
 import DocsCard from "./components/DocsCard";
@@ -90,7 +90,33 @@ const App = () => {
         <div>
             <h2 className="documentText">Download</h2>
             <div className="download" id="download">
-                <p>Will be available very soon...</p>
+                <p>BroCode is currently supported in Windows and Linux. For Source code and development purpose visit <a href="https://github.com/C0mRD/brocode">github</a> .</p>
+
+
+                <table className="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">OS</th>
+                            <th scope="col">FileName</th>
+                            <th scope="col">Download</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row"><b>Windows</b></th>
+                            <td>brocode.exe</td>
+                            <td><a href="https://github.com/C0mRD/brocode/releases/download/v1.0/brocode.exe">Link</a></td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row"><b>Linux</b></th>
+                            <td>brocode-linux.zip</td>
+                            <td><a href="https://github.com/C0mRD/brocode/releases/download/v1.0/brocode-linux.zip">Link</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
             </div>
         </div>
         
