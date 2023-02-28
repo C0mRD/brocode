@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=300px height=100px src="brocode.jpg" alt="Project logo"></a>
+ <img width=300px height=100px src="https://github.com/C0mRD/broCode/blob/main/brocode.jpg" alt="Project logo"></a>
 </p>
 
 <h3 align="center">BroCode</h3>
